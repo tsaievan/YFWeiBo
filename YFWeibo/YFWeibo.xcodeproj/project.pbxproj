@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5727C80C203EEC5F00FC6BE6 /* YFTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5727C80B203EEC5F00FC6BE6 /* YFTabBarController.swift */; };
+		5727C80E203EEC7700FC6BE6 /* YFViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5727C80D203EEC7700FC6BE6 /* YFViewController.swift */; };
+		5727C810203EEC9C00FC6BE6 /* YFDiscoverController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5727C80F203EEC9C00FC6BE6 /* YFDiscoverController.swift */; };
+		5727C812203EECAB00FC6BE6 /* YFHomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5727C811203EECAB00FC6BE6 /* YFHomeController.swift */; };
+		5727C814203EECBA00FC6BE6 /* YFMessageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5727C813203EECBA00FC6BE6 /* YFMessageController.swift */; };
+		5727C816203EECC600FC6BE6 /* YFProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5727C815203EECC600FC6BE6 /* YFProfileController.swift */; };
 		575637B1203EAFDB00EF656D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575637B0203EAFDB00EF656D /* AppDelegate.swift */; };
 		575637B3203EAFDB00EF656D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575637B2203EAFDB00EF656D /* ViewController.swift */; };
 		575637B8203EAFDB00EF656D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 575637B7203EAFDB00EF656D /* Assets.xcassets */; };
@@ -17,6 +23,12 @@
 /* Begin PBXFileReference section */
 		142C15AB9B80C50F7A328063 /* Pods-YFWeibo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YFWeibo.release.xcconfig"; path = "Pods/Target Support Files/Pods-YFWeibo/Pods-YFWeibo.release.xcconfig"; sourceTree = "<group>"; };
 		4CE82FC22D18969616BC923D /* Pods_YFWeibo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YFWeibo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5727C80B203EEC5F00FC6BE6 /* YFTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YFTabBarController.swift; sourceTree = "<group>"; };
+		5727C80D203EEC7700FC6BE6 /* YFViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YFViewController.swift; sourceTree = "<group>"; };
+		5727C80F203EEC9C00FC6BE6 /* YFDiscoverController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YFDiscoverController.swift; sourceTree = "<group>"; };
+		5727C811203EECAB00FC6BE6 /* YFHomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YFHomeController.swift; sourceTree = "<group>"; };
+		5727C813203EECBA00FC6BE6 /* YFMessageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YFMessageController.swift; sourceTree = "<group>"; };
+		5727C815203EECC600FC6BE6 /* YFProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YFProfileController.swift; sourceTree = "<group>"; };
 		575637AD203EAFDB00EF656D /* YFWeibo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YFWeibo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		575637B0203EAFDB00EF656D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		575637B2203EAFDB00EF656D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -46,6 +58,91 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		5727C801203EEC2A00FC6BE6 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				5727C802203EEC2A00FC6BE6 /* Models */,
+				5727C803203EEC2A00FC6BE6 /* Tools */,
+				5727C804203EEC2A00FC6BE6 /* ViewControllers */,
+				5727C80A203EEC2A00FC6BE6 /* ViewModels */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		5727C802203EEC2A00FC6BE6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5727C803203EEC2A00FC6BE6 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		5727C804203EEC2A00FC6BE6 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				5727C805203EEC2A00FC6BE6 /* Discover */,
+				5727C806203EEC2A00FC6BE6 /* Home */,
+				5727C807203EEC2A00FC6BE6 /* Main */,
+				5727C808203EEC2A00FC6BE6 /* Message */,
+				5727C809203EEC2A00FC6BE6 /* Profile */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		5727C805203EEC2A00FC6BE6 /* Discover */ = {
+			isa = PBXGroup;
+			children = (
+				5727C80F203EEC9C00FC6BE6 /* YFDiscoverController.swift */,
+			);
+			path = Discover;
+			sourceTree = "<group>";
+		};
+		5727C806203EEC2A00FC6BE6 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				5727C811203EECAB00FC6BE6 /* YFHomeController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		5727C807203EEC2A00FC6BE6 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				5727C80B203EEC5F00FC6BE6 /* YFTabBarController.swift */,
+				5727C80D203EEC7700FC6BE6 /* YFViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		5727C808203EEC2A00FC6BE6 /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				5727C813203EECBA00FC6BE6 /* YFMessageController.swift */,
+			);
+			path = Message;
+			sourceTree = "<group>";
+		};
+		5727C809203EEC2A00FC6BE6 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				5727C815203EECC600FC6BE6 /* YFProfileController.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		5727C80A203EEC2A00FC6BE6 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		575637A4203EAFDB00EF656D = {
 			isa = PBXGroup;
 			children = (
@@ -67,6 +164,7 @@
 		575637AF203EAFDB00EF656D /* YFWeibo */ = {
 			isa = PBXGroup;
 			children = (
+				5727C801203EEC2A00FC6BE6 /* Classes */,
 				575637B0203EAFDB00EF656D /* AppDelegate.swift */,
 				575637B2203EAFDB00EF656D /* ViewController.swift */,
 				575637B7203EAFDB00EF656D /* Assets.xcassets */,
@@ -223,8 +321,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5727C816203EECC600FC6BE6 /* YFProfileController.swift in Sources */,
 				575637B3203EAFDB00EF656D /* ViewController.swift in Sources */,
+				5727C810203EEC9C00FC6BE6 /* YFDiscoverController.swift in Sources */,
+				5727C80C203EEC5F00FC6BE6 /* YFTabBarController.swift in Sources */,
+				5727C812203EECAB00FC6BE6 /* YFHomeController.swift in Sources */,
 				575637B1203EAFDB00EF656D /* AppDelegate.swift in Sources */,
+				5727C80E203EEC7700FC6BE6 /* YFViewController.swift in Sources */,
+				5727C814203EECBA00FC6BE6 /* YFMessageController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
