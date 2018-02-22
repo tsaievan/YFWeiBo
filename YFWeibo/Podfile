@@ -1,0 +1,13 @@
+platform :ios, '9.0'
+
+target 'YFWeibo' do
+use_frameworks!
+
+pod 'AFNetworking'
+pod 'SnapKit'
+pod 'YYModel'
+pod 'SDWebImage'
+pod 'SVProgressHUD'
+pod 'MJRefresh'
+
+end
