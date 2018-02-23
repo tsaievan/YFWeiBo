@@ -9,9 +9,17 @@
 import UIKit
 
 class YFTabBarController: UITabBarController {
+    
+    ///< 发布按钮的懒加载
+    lazy var composeButton: UIButton = {
+        let button = UIButton(title: nil, image: "tabbar_compose_icon_add", backgroundImage: "tabbar_compose_button", target: self, action: #selector(YFTabBarController.didClickComposeButtonAction(sender:)))
+        return button
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -25,6 +33,7 @@ class YFTabBarController: UITabBarController {
 extension YFTabBarController {
     fileprivate func setupUI () {
         addChildViewControllers()
+        setTabBarAttributes()
         view.backgroundColor = .white
     }
     
@@ -56,9 +65,13 @@ extension YFTabBarController {
     }
     
     private func addComposeButton() {
-        let button = UIButton(title: nil, image: "tabbar_compose_icon_add", backgroundImage: "tabbar_compose_button", target: self, action: #selector(YFTabBarController.didClickComposeButtonAction(sender:)))
-        button.center = CGPoint(x: SCREEN_WIDTH * 0.5, y: TABBAR_HEIGHT * 0.5)
-        tabBar.addSubview(button)
+        composeButton.center = CGPoint(x: SCREEN_WIDTH * 0.5, y: TABBAR_HEIGHT * 0.5)
+        tabBar.addSubview(composeButton)
+    }
+    
+    private func setTabBarAttributes() {
+        tabBar.backgroundImage = UIImage(named: "tabbar_background")
+        tabBar.shadowImage = UIImage.creatImage(size: CGSize(width: 1, height: 1), color: UIColor(white: 0.9, alpha: 1))
     }
 }
 
