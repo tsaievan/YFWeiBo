@@ -13,6 +13,8 @@
 		5727C812203EECAB00FC6BE6 /* YFHomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5727C811203EECAB00FC6BE6 /* YFHomeController.swift */; };
 		5727C814203EECBA00FC6BE6 /* YFMessageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5727C813203EECBA00FC6BE6 /* YFMessageController.swift */; };
 		5727C816203EECC600FC6BE6 /* YFProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5727C815203EECC600FC6BE6 /* YFProfileController.swift */; };
+		5727C818203EF80500FC6BE6 /* YFCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5727C817203EF80500FC6BE6 /* YFCommon.swift */; };
+		5727C81A203FA70500FC6BE6 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5727C819203FA70500FC6BE6 /* UIButton+Extension.swift */; };
 		575637B1203EAFDB00EF656D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575637B0203EAFDB00EF656D /* AppDelegate.swift */; };
 		575637B3203EAFDB00EF656D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575637B2203EAFDB00EF656D /* ViewController.swift */; };
 		575637B8203EAFDB00EF656D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 575637B7203EAFDB00EF656D /* Assets.xcassets */; };
@@ -29,6 +31,8 @@
 		5727C811203EECAB00FC6BE6 /* YFHomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YFHomeController.swift; sourceTree = "<group>"; };
 		5727C813203EECBA00FC6BE6 /* YFMessageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YFMessageController.swift; sourceTree = "<group>"; };
 		5727C815203EECC600FC6BE6 /* YFProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YFProfileController.swift; sourceTree = "<group>"; };
+		5727C817203EF80500FC6BE6 /* YFCommon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YFCommon.swift; sourceTree = "<group>"; };
+		5727C819203FA70500FC6BE6 /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 		575637AD203EAFDB00EF656D /* YFWeibo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YFWeibo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		575637B0203EAFDB00EF656D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		575637B2203EAFDB00EF656D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -79,6 +83,8 @@
 		5727C803203EEC2A00FC6BE6 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				5727C817203EF80500FC6BE6 /* YFCommon.swift */,
+				5727C819203FA70500FC6BE6 /* UIButton+Extension.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -324,7 +330,9 @@
 				5727C816203EECC600FC6BE6 /* YFProfileController.swift in Sources */,
 				575637B3203EAFDB00EF656D /* ViewController.swift in Sources */,
 				5727C810203EEC9C00FC6BE6 /* YFDiscoverController.swift in Sources */,
+				5727C81A203FA70500FC6BE6 /* UIButton+Extension.swift in Sources */,
 				5727C80C203EEC5F00FC6BE6 /* YFTabBarController.swift in Sources */,
+				5727C818203EF80500FC6BE6 /* YFCommon.swift in Sources */,
 				5727C812203EECAB00FC6BE6 /* YFHomeController.swift in Sources */,
 				575637B1203EAFDB00EF656D /* AppDelegate.swift in Sources */,
 				5727C80E203EEC7700FC6BE6 /* YFViewController.swift in Sources */,

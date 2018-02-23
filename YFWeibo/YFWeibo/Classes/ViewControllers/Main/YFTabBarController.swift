@@ -13,6 +13,11 @@ class YFTabBarController: UITabBarController {
         super.viewDidLoad()
         setupUI()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        addComposeButton()
+    }
 }
 
 
@@ -30,6 +35,9 @@ extension YFTabBarController {
         let messageVc = YFMessageController()
         addChildViewController(viewController: messageVc, title: "消息", imageName: "tabbar_message_center")
         
+        let emptyVc = UIViewController()
+        addChildViewController(viewController: emptyVc, title: "", imageName: "")
+        
         let discoverVc = YFDiscoverController()
         addChildViewController(viewController: discoverVc, title: "发现", imageName: "tabbar_discover")
         
@@ -45,5 +53,17 @@ extension YFTabBarController {
         viewController.tabBarItem.setTitleTextAttributes([.foregroundColor : UIColor.orange], for: .selected)
         let nav = UINavigationController(rootViewController: viewController)
         addChildViewController(nav)
+    }
+    
+    private func addComposeButton() {
+        let button = UIButton(title: nil, image: "tabbar_compose_icon_add", backgroundImage: "tabbar_compose_button", target: self, action: #selector(YFTabBarController.didClickComposeButtonAction(sender:)))
+        button.center = CGPoint(x: SCREEN_WIDTH * 0.5, y: TABBAR_HEIGHT * 0.5)
+        tabBar.addSubview(button)
+    }
+}
+
+extension YFTabBarController {
+    @objc fileprivate func didClickComposeButtonAction(sender: UIButton) {
+        print("点击了发布按钮\(sender)")
     }
 }
