@@ -9,7 +9,13 @@
 import UIKit
 import SnapKit
 
+protocol YFVisitorViewDelegate: NSObjectProtocol {
+    func beginLogin()
+}
+
 class YFVisitorView: UIView {
+    
+    weak var delegate: YFVisitorViewDelegate?
     
     /// 大图标
     lazy var iconImageView = UIImageView(imageName: "visitordiscover_feed_image_house")
@@ -24,10 +30,10 @@ class YFVisitorView: UIView {
     lazy var textLabel = UILabel(title: "在这里, 你可以追星, 看段子, 交朋友等等", fontSize: 14, alignment: .center)
     
     /// 注册按钮
-    lazy var registButton = UIButton(title: "注册", titleColor: GLOBAL_COLOR_ORANGE, fontSize: 14, backgroundImage: "common_button_white_disable", target: nil, action: nil)
+    lazy var registButton = UIButton(title: "注册", titleColor: GLOBAL_COLOR_ORANGE, fontSize: 14, backgroundImage: "common_button_white_disable", target: self, action: #selector(YFVisitorView.register))
     
     /// 登录按钮
-    lazy var loginButton = UIButton(title: "登录", titleColor: GLOBAL_COLOR_DARKGRAY, fontSize: 14, backgroundImage: "common_button_white_disable", target: nil, action: nil)
+    lazy var loginButton = UIButton(title: "登录", titleColor: GLOBAL_COLOR_DARKGRAY, fontSize: 14, backgroundImage: "common_button_white_disable", target: self, action: #selector(YFVisitorView.login))
     
     override init(frame: CGRect) {
         super.init(frame: SCREEN_BOUNDS)
@@ -101,5 +107,16 @@ extension YFVisitorView {
         animation.repeatCount = MAXFLOAT
         animation.isRemovedOnCompletion = false
         circleImageView.layer.add(animation, forKey: nil)
+    }
+}
+
+extension YFVisitorView {
+    @objc fileprivate func register() {
+        print("点击了注册按钮")   
+    }
+    
+    @objc fileprivate func login() {
+        print("点击了登录按钮")
+        delegate?.beginLogin()
     }
 }

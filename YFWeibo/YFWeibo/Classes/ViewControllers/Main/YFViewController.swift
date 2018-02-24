@@ -22,6 +22,15 @@ extension YFViewController {
     
     fileprivate func setupVisitorView() {
         let visitorView = YFVisitorView()
+        visitorView.delegate = self
         view.addSubview(visitorView)
+    }
+}
+
+extension YFViewController: YFVisitorViewDelegate {
+    func beginLogin() {
+        let oAuthVc = YFOAuthController()
+        let nav = UINavigationController(rootViewController: oAuthVc)
+        present(nav, animated: true, completion: nil)
     }
 }
