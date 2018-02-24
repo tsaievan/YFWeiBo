@@ -19,3 +19,5 @@ let TABBAR_HEIGHT: CGFloat = 49.0
 let GLOBAL_COLOR_ORANGE = UIColor.orange
 
 let GLOBAL_COLOR_DARKGRAY = UIColor.darkGray
+
+let VISITOR_VIEW_BACKGROUND_COLOR = UIColor(white: 237.0 / 255.0, alpha: 1)

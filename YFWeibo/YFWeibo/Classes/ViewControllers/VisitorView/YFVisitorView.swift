@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SnapKit
 
 class YFVisitorView: UIView {
     
@@ -42,11 +43,29 @@ class YFVisitorView: UIView {
 
 extension YFVisitorView {
     fileprivate func setupUI() {
+        backgroundColor = VISITOR_VIEW_BACKGROUND_COLOR
         addSubview(iconImageView)
         addSubview(circleImageView)
         addSubview(shadowImageView)
         addSubview(textLabel)
         addSubview(registButton)
         addSubview(loginButton)
+        
+        ///< 自动布局
+        iconImageView.snp.makeConstraints { (make) in
+            make.centerX.equalTo(self)
+            make.centerY.equalTo(self).offset(-100)
+        }
+        
+        circleImageView.snp.makeConstraints { (make) in
+            make.center.equalTo(iconImageView)
+        }
+        
+        shadowImageView.snp.makeConstraints { (make) in
+            make.centerX.equalTo(circleImageView)
+            make.centerY.equalTo(circleImageView).offset(50)
+            make.left.equalTo(self)
+            make.right.equalTo(self)
+        }
     }
 }
