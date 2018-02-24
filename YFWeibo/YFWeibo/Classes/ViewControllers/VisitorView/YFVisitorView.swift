@@ -23,10 +23,10 @@ class YFVisitorView: UIView {
     lazy var textLabel = UILabel(title: "在这里, 你可以追星, 看段子, 交朋友等等", fontSize: 14, alignment: .center)
     
     /// 注册按钮
-    lazy var registButton = UIButton()
+    lazy var registButton = UIButton(title: "注册", titleColor: GLOBAL_COLOR_ORANGE, fontSize: 14, backgroundImage: "", target: nil, action: nil)
     
     /// 登录按钮
-    lazy var loginButton = UIButton()
+    lazy var loginButton = UIButton(title: "登录", titleColor: GLOBAL_COLOR_DARKGRAY, fontSize: 14, backgroundImage: "", target: nil, action: nil)
     
     override init(frame: CGRect) {
         super.init(frame: SCREEN_BOUNDS)

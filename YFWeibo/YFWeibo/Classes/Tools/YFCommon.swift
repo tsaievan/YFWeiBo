@@ -15,3 +15,7 @@ let SCREEN_WIDTH = UIScreen.main.bounds.width
 let SCREEN_HEIGHT = UIScreen.main.bounds.height
 
 let TABBAR_HEIGHT: CGFloat = 49.0
+
+let GLOBAL_COLOR_ORANGE = UIColor.orange
+
+let GLOBAL_COLOR_DARKGRAY = UIColor.darkGray

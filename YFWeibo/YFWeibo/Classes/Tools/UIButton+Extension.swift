@@ -11,6 +11,8 @@ import UIKit
 extension UIButton {
     ///< 便利构造函数
     convenience init(title: String?,
+                     titleColor: UIColor? = GLOBAL_COLOR_DARKGRAY,
+                     fontSize: CGFloat? = 13,
                      image: String? = nil,
                      backgroundImage: String? = nil,
                      target: Any?,
@@ -27,6 +29,12 @@ extension UIButton {
         if let backgroundImage = backgroundImage {
             setBackgroundImage(UIImage(named: backgroundImage), for: .normal)
             setBackgroundImage(UIImage(named: "\(backgroundImage)_highlighted"), for: .highlighted)
+        }
+        if let titleColor = titleColor {
+            setTitleColor(titleColor, for: .normal)
+        }
+        if let fontSize = fontSize {
+            titleLabel?.font = UIFont.systemFont(ofSize: fontSize)
         }
         sizeToFit()
         if let target = target,
