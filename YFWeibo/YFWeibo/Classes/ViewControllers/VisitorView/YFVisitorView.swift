@@ -24,10 +24,10 @@ class YFVisitorView: UIView {
     lazy var textLabel = UILabel(title: "在这里, 你可以追星, 看段子, 交朋友等等", fontSize: 14, alignment: .center)
     
     /// 注册按钮
-    lazy var registButton = UIButton(title: "注册", titleColor: GLOBAL_COLOR_ORANGE, fontSize: 14, backgroundImage: "", target: nil, action: nil)
+    lazy var registButton = UIButton(title: "注册", titleColor: GLOBAL_COLOR_ORANGE, fontSize: 14, backgroundImage: "common_button_white_disable", target: nil, action: nil)
     
     /// 登录按钮
-    lazy var loginButton = UIButton(title: "登录", titleColor: GLOBAL_COLOR_DARKGRAY, fontSize: 14, backgroundImage: "", target: nil, action: nil)
+    lazy var loginButton = UIButton(title: "登录", titleColor: GLOBAL_COLOR_DARKGRAY, fontSize: 14, backgroundImage: "common_button_white_disable", target: nil, action: nil)
     
     override init(frame: CGRect) {
         super.init(frame: SCREEN_BOUNDS)
@@ -66,6 +66,26 @@ extension YFVisitorView {
             make.centerY.equalTo(circleImageView).offset(50)
             make.left.equalTo(self)
             make.right.equalTo(self)
+        }
+        
+        textLabel.snp.makeConstraints { (make) in
+            make.centerX.equalTo(shadowImageView)
+            make.centerY.equalTo(circleImageView).offset(150)
+            make.left.equalTo(self).offset(20)
+            make.right.equalTo(self).offset(-20)
+        }
+        
+        registButton.snp.makeConstraints { (make) in
+            make.left.equalTo(self).offset(70)
+            make.bottom.equalTo(self).offset(-150)
+            make.width.equalTo(80)
+            make.height.equalTo(35)
+        }
+        
+        loginButton.snp.makeConstraints { (make) in
+            make.right.equalTo(self).offset(-70)
+            make.bottom.equalTo(registButton)
+            make.size.equalTo(registButton)
         }
     }
 }
