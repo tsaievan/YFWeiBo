@@ -51,6 +51,11 @@ extension YFVisitorView {
         addSubview(registButton)
         addSubview(loginButton)
         
+        makeConstraints()
+        addAnimations()
+    }
+    
+    fileprivate func makeConstraints() {
         ///< 自动布局
         iconImageView.snp.makeConstraints { (make) in
             make.centerX.equalTo(self)
@@ -87,5 +92,14 @@ extension YFVisitorView {
             make.bottom.equalTo(registButton)
             make.size.equalTo(registButton)
         }
+    }
+    
+    fileprivate func addAnimations() {
+        let animation = CABasicAnimation(keyPath: "transform.rotation")
+        animation.toValue = Double.pi * 2
+        animation.duration = 10
+        animation.repeatCount = MAXFLOAT
+        animation.isRemovedOnCompletion = false
+        circleImageView.layer.add(animation, forKey: nil)
     }
 }
