@@ -20,6 +20,9 @@
 		575637B3203EAFDB00EF656D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575637B2203EAFDB00EF656D /* ViewController.swift */; };
 		575637B8203EAFDB00EF656D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 575637B7203EAFDB00EF656D /* Assets.xcassets */; };
 		575637BB203EAFDB00EF656D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 575637B9203EAFDB00EF656D /* LaunchScreen.storyboard */; };
+		578405F5204188990085B57E /* YFVisitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578405F4204188990085B57E /* YFVisitorView.swift */; };
+		578405F7204193800085B57E /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578405F6204193800085B57E /* UIImageView+Extension.swift */; };
+		578405F9204194150085B57E /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578405F8204194150085B57E /* UILabel+Extension.swift */; };
 		887D0D07EAA7343CE69C35D0 /* Pods_YFWeibo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CE82FC22D18969616BC923D /* Pods_YFWeibo.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +44,9 @@
 		575637B7203EAFDB00EF656D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		575637BA203EAFDB00EF656D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		575637BC203EAFDB00EF656D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		578405F4204188990085B57E /* YFVisitorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YFVisitorView.swift; sourceTree = "<group>"; };
+		578405F6204193800085B57E /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
+		578405F8204194150085B57E /* UILabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
 		6CA9B8805CC4D0D0FB4898A7 /* Pods-YFWeibo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YFWeibo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YFWeibo/Pods-YFWeibo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -88,6 +94,8 @@
 				5727C817203EF80500FC6BE6 /* YFCommon.swift */,
 				5727C819203FA70500FC6BE6 /* UIButton+Extension.swift */,
 				5727C81B203FB6DB00FC6BE6 /* UIImage+Extension.swift */,
+				578405F6204193800085B57E /* UIImageView+Extension.swift */,
+				578405F8204194150085B57E /* UILabel+Extension.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -95,6 +103,7 @@
 		5727C804203EEC2A00FC6BE6 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				578405F32041888A0085B57E /* VisitorView */,
 				5727C805203EEC2A00FC6BE6 /* Discover */,
 				5727C806203EEC2A00FC6BE6 /* Home */,
 				5727C807203EEC2A00FC6BE6 /* Main */,
@@ -181,6 +190,14 @@
 				575637BC203EAFDB00EF656D /* Info.plist */,
 			);
 			path = YFWeibo;
+			sourceTree = "<group>";
+		};
+		578405F32041888A0085B57E /* VisitorView */ = {
+			isa = PBXGroup;
+			children = (
+				578405F4204188990085B57E /* YFVisitorView.swift */,
+			);
+			path = VisitorView;
 			sourceTree = "<group>";
 		};
 		FFF17B7D7ED716E52A1F12CD /* Pods */ = {
@@ -330,7 +347,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				578405F5204188990085B57E /* YFVisitorView.swift in Sources */,
 				5727C816203EECC600FC6BE6 /* YFProfileController.swift in Sources */,
+				578405F7204193800085B57E /* UIImageView+Extension.swift in Sources */,
 				575637B3203EAFDB00EF656D /* ViewController.swift in Sources */,
 				5727C810203EEC9C00FC6BE6 /* YFDiscoverController.swift in Sources */,
 				5727C81A203FA70500FC6BE6 /* UIButton+Extension.swift in Sources */,
@@ -338,6 +357,7 @@
 				5727C818203EF80500FC6BE6 /* YFCommon.swift in Sources */,
 				5727C812203EECAB00FC6BE6 /* YFHomeController.swift in Sources */,
 				575637B1203EAFDB00EF656D /* AppDelegate.swift in Sources */,
+				578405F9204194150085B57E /* UILabel+Extension.swift in Sources */,
 				5727C80E203EEC7700FC6BE6 /* YFViewController.swift in Sources */,
 				5727C81C203FB6DB00FC6BE6 /* UIImage+Extension.swift in Sources */,
 				5727C814203EECBA00FC6BE6 /* YFMessageController.swift in Sources */,
