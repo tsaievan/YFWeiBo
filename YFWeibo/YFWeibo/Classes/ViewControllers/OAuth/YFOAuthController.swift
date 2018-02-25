@@ -60,14 +60,8 @@ extension YFOAuthController {
         if let urlString = request.url?.absoluteString, urlString.hasPrefix(REDIRECT_URI) {
             if let query = request.url?.query, query.hasPrefix("code=") {
                 let code = String(query["code=".endIndex...])
-                let parameters = ["client_id" : APP_KEY,
-                                  "client_secret" : APP_SECRET,
-                                  "grant_type" : AUTHORIZATION_CODE,
-                                  "code" : code,
-                                  "redirect_uri" : REDIRECT_URI]
-                
-                YFNetworkTool.sharedTool.request(method: POST, URLString: ACCESS_TOKEN_URL, parameters: parameters, success: { (_, response) in
-                    print("response==========\(response)")
+                YFNetworkTool.sharedTool.requestOAuth(code: code, completion: {_,response in
+                    print(response)
                 })
             }else {
                 dismiss(animated: true, completion: nil)
