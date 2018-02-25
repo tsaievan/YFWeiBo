@@ -8,6 +8,10 @@
 
 import UIKit
 
+let APP_KEY = "4029511368"
+let APP_SECRET = "85c1527aa49bf3fb261875f48bcfcc2e"
+let REDIRECT_URI = "https://www.baidu.com"
+
 class YFOAuthController: UIViewController, UIWebViewDelegate {
     lazy var webView: UIWebView = {
         let wb = UIWebView(frame: SCREEN_BOUNDS)
@@ -48,6 +52,15 @@ extension YFOAuthController {
 // MARK: webView的代理
 extension YFOAuthController {
     func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool {
+        if let urlString = request.url?.absoluteString, urlString.hasPrefix(REDIRECT_URI) {
+            if let query = request.url?.query, query.hasPrefix("code=") {
+                let subString = String(query["code=".endIndex...])
+                print("code==========\(subString)")
+            }else {
+                dismiss(animated: true, completion: nil)
+            }
+            return false
+        }
         return true
     }
 }
