@@ -11,6 +11,11 @@ import UIKit
 let APP_KEY = "4029511368"
 let APP_SECRET = "85c1527aa49bf3fb261875f48bcfcc2e"
 let REDIRECT_URI = "https://www.baidu.com"
+let GET = "GET"
+let POST = "POST"
+let ACCESS_TOKEN_URL = "https://api.weibo.com/oauth2/access_token"
+let AUTHORIZATION_CODE = "authorization_code"
+
 
 class YFOAuthController: UIViewController, UIWebViewDelegate {
     lazy var webView: UIWebView = {
@@ -54,8 +59,16 @@ extension YFOAuthController {
     func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool {
         if let urlString = request.url?.absoluteString, urlString.hasPrefix(REDIRECT_URI) {
             if let query = request.url?.query, query.hasPrefix("code=") {
-                let subString = String(query["code=".endIndex...])
-                print("code==========\(subString)")
+                let code = String(query["code=".endIndex...])
+                let parameters = ["client_id" : APP_KEY,
+                                  "client_secret" : APP_SECRET,
+                                  "grant_type" : AUTHORIZATION_CODE,
+                                  "code" : code,
+                                  "redirect_uri" : REDIRECT_URI]
+                
+                YFNetworkTool.sharedTool.request(method: POST, URLString: ACCESS_TOKEN_URL, parameters: parameters, success: { (_, response) in
+                    print("response==========\(response)")
+                })
             }else {
                 dismiss(animated: true, completion: nil)
             }
