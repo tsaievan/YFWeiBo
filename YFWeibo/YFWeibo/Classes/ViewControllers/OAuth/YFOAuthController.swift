@@ -76,6 +76,12 @@ extension YFOAuthController {
         }
         return true
     }
+    
+    
+    /// 网页加载完成之后, 调用该方法, 调用js必须在此位置
+    func webViewDidFinishLoad(_ webView: UIWebView) {
+        webView.stringByEvaluatingJavaScript(from: "document.getElementById('userId').value='caiyifancool333@sina.com';document.getElementById('passwd').value='1292086774'")
+    }
 }
 
 
