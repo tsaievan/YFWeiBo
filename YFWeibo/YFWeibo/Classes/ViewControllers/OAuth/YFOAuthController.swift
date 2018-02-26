@@ -14,6 +14,7 @@ let REDIRECT_URI = "https://www.baidu.com"
 let GET = "GET"
 let POST = "POST"
 let ACCESS_TOKEN_URL = "https://api.weibo.com/oauth2/access_token"
+let GET_USER_INFO_URL = "https://api.weibo.com/2/users/show.json"
 let AUTHORIZATION_CODE = "authorization_code"
 
 
@@ -46,7 +47,7 @@ extension YFOAuthController {
 
 extension YFOAuthController {
     fileprivate func loadWebView() {
-        let urlString = "https://api.weibo.com/oauth2/authorize?client_id=4029511368&redirect_uri=https://www.baidu.com"
+        let urlString = YFNetworkTool.sharedTool.oauthUrl
         guard let url = URL(string: urlString) else {
             return
         }
@@ -60,8 +61,14 @@ extension YFOAuthController {
         if let urlString = request.url?.absoluteString, urlString.hasPrefix(REDIRECT_URI) {
             if let query = request.url?.query, query.hasPrefix("code=") {
                 let code = String(query["code=".endIndex...])
-                YFNetworkTool.sharedTool.requestOAuth(code: code, completion: {_,response in
-                    print(response)
+                YFNetworkTool.sharedTool.requestOAuth(code: code, completion: { (_, response) in
+                    if let response = response as? [String : Any] {
+                        let uid = response["uid"] as? String
+                        let accessToken = response["access_token"] as? String
+                        YFNetworkTool.sharedTool.requesetUserInfo(uid: uid, accessToken: accessToken ?? "", completion: { (_, response) in
+                            print(response)
+                        })
+                    }
                 })
             }else {
                 dismiss(animated: true, completion: nil)

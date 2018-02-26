@@ -16,6 +16,6 @@ extension YFNetworkTool {
                           "grant_type" : AUTHORIZATION_CODE,
                           "code" : code,
                           "redirect_uri" : REDIRECT_URI]
-        YFNetworkTool.sharedTool.request(method: POST, URLString: ACCESS_TOKEN_URL, parameters: parameters, success: completion)
+        request(method: POST, URLString: ACCESS_TOKEN_URL, parameters: parameters, success: completion)
     }
 }

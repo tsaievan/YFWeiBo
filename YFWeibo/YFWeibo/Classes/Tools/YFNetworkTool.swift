@@ -11,6 +11,11 @@ import AFNetworking
 
 class YFNetworkTool: AFHTTPSessionManager {
     static let sharedTool = YFNetworkTool()
+    
+    var oauthUrl:  String {
+        return "https://api.weibo.com/oauth2/authorize?client_id=\(APP_KEY)&redirect_uri=\(REDIRECT_URI)"
+    }
+    
     func request(method: String, URLString: String, parameters: Any?, success: ((URLSessionDataTask, Any?) -> Void)?,failure: ((URLSessionDataTask?, Error) -> Void)? = nil) {
         if method == "GET" {
             get(URLString, parameters: parameters, progress: nil, success: success, failure: failure)
