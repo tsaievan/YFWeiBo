@@ -8,6 +8,8 @@
 
 import UIKit
 
+let USER_ACCOUNT_KEY = "USER_ACCOUNT_KEY"
+
 class YFUserAccount: NSObject {
     
     /// 单例
@@ -40,5 +42,22 @@ class YFUserAccount: NSObject {
     
     var isLogin: Bool {
         return (access_token != nil) && !isExpired
+    }
+    
+    override func setValue(_ value: Any?, forUndefinedKey key: String) {}
+    
+    ///< 存储用户信息
+    func saveUserAccount(dict: [String : Any]) {
+        setValuesForKeys(dict)
+        let dict = dictionaryWithValues(forKeys: ["uid",
+                                                  "screen_name",
+                                                  "avatar_large",
+                                                  "access_token",
+                                                  "expired_date"])
+        UserDefaults.standard.set(dict, forKey: USER_ACCOUNT_KEY)
+    }
+    
+    func readUserAccount() {
+        
     }
 }

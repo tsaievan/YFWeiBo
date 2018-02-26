@@ -70,6 +70,7 @@ extension YFOAuthController {
                                 for (k, v) in responseDict {
                                     userInfoDict[k] = v
                                 }
+                                YFUserAccount.sharedAccount.saveUserAccount(dict: userInfoDict)
                             }
                         })
                     }
