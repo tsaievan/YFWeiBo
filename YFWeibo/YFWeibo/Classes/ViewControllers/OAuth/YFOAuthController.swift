@@ -62,11 +62,15 @@ extension YFOAuthController {
             if let query = request.url?.query, query.hasPrefix("code=") {
                 let code = String(query["code=".endIndex...])
                 YFNetworkTool.sharedTool.requestOAuth(code: code, completion: { (_, response) in
-                    if let response = response as? [String : Any] {
-                        let uid = response["uid"] as? String
-                        let accessToken = response["access_token"] as? String
+                    if let responseDict = response as? [String : Any] {
+                        let uid = responseDict["uid"] as? String
+                        let accessToken = responseDict["access_token"] as? String
                         YFNetworkTool.sharedTool.requesetUserInfo(uid: uid, accessToken: accessToken ?? "", completion: { (_, response) in
-                            print(response)
+                            if var userInfoDict = response as? [String : Any] {
+                                for (k, v) in responseDict {
+                                    userInfoDict[k] = v
+                                }
+                            }
                         })
                     }
                 })
