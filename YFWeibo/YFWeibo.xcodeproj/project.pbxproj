@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		570C8B7B2043AB950083085B /* YFNetworkTool+UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570C8B7A2043AB950083085B /* YFNetworkTool+UserInfo.swift */; };
+		570C8B7D2043C8290083085B /* YFUserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570C8B7C2043C8290083085B /* YFUserAccount.swift */; };
 		5727C80C203EEC5F00FC6BE6 /* YFTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5727C80B203EEC5F00FC6BE6 /* YFTabBarController.swift */; };
 		5727C80E203EEC7700FC6BE6 /* YFViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5727C80D203EEC7700FC6BE6 /* YFViewController.swift */; };
 		5727C810203EEC9C00FC6BE6 /* YFDiscoverController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5727C80F203EEC9C00FC6BE6 /* YFDiscoverController.swift */; };
@@ -34,6 +35,7 @@
 		142C15AB9B80C50F7A328063 /* Pods-YFWeibo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YFWeibo.release.xcconfig"; path = "Pods/Target Support Files/Pods-YFWeibo/Pods-YFWeibo.release.xcconfig"; sourceTree = "<group>"; };
 		4CE82FC22D18969616BC923D /* Pods_YFWeibo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YFWeibo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		570C8B7A2043AB950083085B /* YFNetworkTool+UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "YFNetworkTool+UserInfo.swift"; sourceTree = "<group>"; };
+		570C8B7C2043C8290083085B /* YFUserAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YFUserAccount.swift; sourceTree = "<group>"; };
 		5727C80B203EEC5F00FC6BE6 /* YFTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YFTabBarController.swift; sourceTree = "<group>"; };
 		5727C80D203EEC7700FC6BE6 /* YFViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YFViewController.swift; sourceTree = "<group>"; };
 		5727C80F203EEC9C00FC6BE6 /* YFDiscoverController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YFDiscoverController.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 		5727C802203EEC2A00FC6BE6 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				570C8B7C2043C8290083085B /* YFUserAccount.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -381,6 +384,7 @@
 				5727C812203EECAB00FC6BE6 /* YFHomeController.swift in Sources */,
 				575637B1203EAFDB00EF656D /* AppDelegate.swift in Sources */,
 				578405F9204194150085B57E /* UILabel+Extension.swift in Sources */,
+				570C8B7D2043C8290083085B /* YFUserAccount.swift in Sources */,
 				5727C80E203EEC7700FC6BE6 /* YFViewController.swift in Sources */,
 				5727C81C203FB6DB00FC6BE6 /* UIImage+Extension.swift in Sources */,
 				570C8B7B2043AB950083085B /* YFNetworkTool+UserInfo.swift in Sources */,
