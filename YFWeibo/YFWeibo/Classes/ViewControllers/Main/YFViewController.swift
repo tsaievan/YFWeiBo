@@ -9,9 +9,22 @@
 import UIKit
 
 class YFViewController: UIViewController {
+    
+    var isLogin: Bool {
+        return YFUserAccount.sharedAccount.isLogin
+    }
+    
+    var visitorView: YFVisitorView?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        NotificationCenter.default.addObserver(self, selector: #selector(dismissVisitorView), name: NSNotification.Name(rawValue: LOGIN_SUCCESS_NOTIFICATION), object: nil)
+    }
+    
+    ///< 移除通知
+    deinit {
+        NotificationCenter.default.removeObserver(self)
     }
 }
 
@@ -21,16 +34,28 @@ extension YFViewController {
     }
     
     fileprivate func setupVisitorView() {
-        let visitorView = YFVisitorView()
-        visitorView.delegate = self
-        view.addSubview(visitorView)
+        if visitorView == nil && !isLogin {
+            visitorView = YFVisitorView()
+            visitorView?.delegate = self
+            if let v = visitorView {
+                view.addSubview(v)
+            }
+        }
+    }
+}
+
+extension YFViewController {
+    @objc fileprivate func dismissVisitorView() {
+        visitorView?.removeFromSuperview()
+        visitorView = nil
     }
 }
 
 extension YFViewController: YFVisitorViewDelegate {
     func beginLogin() {
-        let oAuthVc = YFOAuthController()
-        let nav = UINavigationController(rootViewController: oAuthVc)
+        let oauthVc = YFOAuthController()
+        let nav = UINavigationController(rootViewController: oauthVc)
         present(nav, animated: true, completion: nil)
     }
 }
+

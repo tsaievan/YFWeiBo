@@ -13,7 +13,7 @@ class YFProfileController: YFViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        visitorView?.setVisitorView(imageName: "visitordiscover_image_profile", title: "我的我的我的我的我的我的我的我的我的我的我的我的我的我的我的我的我的我的", animation: false)
     }
 
     override func didReceiveMemoryWarning() {

@@ -16,6 +16,7 @@ let POST = "POST"
 let ACCESS_TOKEN_URL = "https://api.weibo.com/oauth2/access_token"
 let GET_USER_INFO_URL = "https://api.weibo.com/2/users/show.json"
 let AUTHORIZATION_CODE = "authorization_code"
+let LOGIN_SUCCESS_NOTIFICATION = "LOGIN_SUCCESS_NOTIFICATION"
 
 
 class YFOAuthController: UIViewController, UIWebViewDelegate {
@@ -71,6 +72,8 @@ extension YFOAuthController {
                                     userInfoDict[k] = v
                                 }
                                 YFUserAccount.sharedAccount.saveUserAccount(dict: userInfoDict)
+                                NotificationCenter.default.post(name: NSNotification.Name(rawValue: LOGIN_SUCCESS_NOTIFICATION), object: nil)
+                                self.dismiss(animated: true, completion: nil)
                             }
                         })
                     }

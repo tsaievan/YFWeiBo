@@ -108,6 +108,12 @@ extension YFVisitorView {
         animation.isRemovedOnCompletion = false
         circleImageView.layer.add(animation, forKey: nil)
     }
+    
+    func setVisitorView(imageName: String?, title: String?, animation: Bool = false) {
+        iconImageView.image = UIImage(named: imageName ?? "visitordiscover_feed_image_house")
+        textLabel.text = title
+        circleImageView.isHidden = !animation
+    }
 }
 
 extension YFVisitorView {

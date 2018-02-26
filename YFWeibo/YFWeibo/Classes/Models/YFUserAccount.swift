@@ -10,6 +10,7 @@ import UIKit
 
 let USER_ACCOUNT_KEY = "USER_ACCOUNT_KEY"
 
+@objcMembers
 class YFUserAccount: NSObject {
     
     /// 单例
@@ -44,6 +45,11 @@ class YFUserAccount: NSObject {
         return (access_token != nil) && !isExpired
     }
     
+    override init() {
+        super.init()
+        readUserAccount()
+    }
+    
     override func setValue(_ value: Any?, forUndefinedKey key: String) {}
     
     ///< 存储用户信息
@@ -57,7 +63,10 @@ class YFUserAccount: NSObject {
         UserDefaults.standard.set(dict, forKey: USER_ACCOUNT_KEY)
     }
     
+    ///< 读取用户信息
     func readUserAccount() {
-        
+        if let userDict = UserDefaults.standard.object(forKey: USER_ACCOUNT_KEY) as? [String : Any] {
+            setValuesForKeys(userDict)
+        }
     }
 }

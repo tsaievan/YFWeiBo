@@ -12,8 +12,7 @@ class YFDiscoverController: YFViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        visitorView?.setVisitorView(imageName: nil, title: "发现发现发现发现发现发现发现发现发现发现发现发现发现", animation: false)
     }
 
     override func didReceiveMemoryWarning() {
