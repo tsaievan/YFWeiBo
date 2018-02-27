@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		570C8B7B2043AB950083085B /* YFNetworkTool+UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570C8B7A2043AB950083085B /* YFNetworkTool+UserInfo.swift */; };
 		570C8B7D2043C8290083085B /* YFUserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570C8B7C2043C8290083085B /* YFUserAccount.swift */; };
+		5712693520458C02001F0FFB /* NewFeatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5712693420458C02001F0FFB /* NewFeatureView.swift */; };
 		5727C80C203EEC5F00FC6BE6 /* YFTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5727C80B203EEC5F00FC6BE6 /* YFTabBarController.swift */; };
 		5727C80E203EEC7700FC6BE6 /* YFViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5727C80D203EEC7700FC6BE6 /* YFViewController.swift */; };
 		5727C810203EEC9C00FC6BE6 /* YFDiscoverController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5727C80F203EEC9C00FC6BE6 /* YFDiscoverController.swift */; };
@@ -36,6 +37,7 @@
 		4CE82FC22D18969616BC923D /* Pods_YFWeibo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YFWeibo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		570C8B7A2043AB950083085B /* YFNetworkTool+UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "YFNetworkTool+UserInfo.swift"; sourceTree = "<group>"; };
 		570C8B7C2043C8290083085B /* YFUserAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YFUserAccount.swift; sourceTree = "<group>"; };
+		5712693420458C02001F0FFB /* NewFeatureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewFeatureView.swift; sourceTree = "<group>"; };
 		5727C80B203EEC5F00FC6BE6 /* YFTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YFTabBarController.swift; sourceTree = "<group>"; };
 		5727C80D203EEC7700FC6BE6 /* YFViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YFViewController.swift; sourceTree = "<group>"; };
 		5727C80F203EEC9C00FC6BE6 /* YFDiscoverController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YFDiscoverController.swift; sourceTree = "<group>"; };
@@ -80,6 +82,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		5712693320458BEF001F0FFB /* NewFeature */ = {
+			isa = PBXGroup;
+			children = (
+				5712693420458C02001F0FFB /* NewFeatureView.swift */,
+			);
+			path = NewFeature;
+			sourceTree = "<group>";
+		};
 		5727C801203EEC2A00FC6BE6 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -117,6 +127,7 @@
 		5727C804203EEC2A00FC6BE6 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				5712693320458BEF001F0FFB /* NewFeature */,
 				578405FA2041B22E0085B57E /* OAuth */,
 				578405F32041888A0085B57E /* VisitorView */,
 				5727C805203EEC2A00FC6BE6 /* Discover */,
@@ -374,6 +385,7 @@
 				5727C816203EECC600FC6BE6 /* YFProfileController.swift in Sources */,
 				578405FC2041B2470085B57E /* YFOAuthController.swift in Sources */,
 				578405F7204193800085B57E /* UIImageView+Extension.swift in Sources */,
+				5712693520458C02001F0FFB /* NewFeatureView.swift in Sources */,
 				575637B3203EAFDB00EF656D /* ViewController.swift in Sources */,
 				574A02942042F12D0050D6FE /* YFNetworkTool+OAuth.swift in Sources */,
 				5783C07B2042E5A900C18D67 /* YFNetworkTool.swift in Sources */,
