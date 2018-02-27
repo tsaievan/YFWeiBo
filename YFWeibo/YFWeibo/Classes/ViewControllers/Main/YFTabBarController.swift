@@ -73,6 +73,14 @@ extension YFTabBarController {
         tabBar.backgroundImage = UIImage(named: "tabbar_background")
         tabBar.shadowImage = UIImage.creatImage(size: CGSize(width: 1, height: 1), color: UIColor(white: 0.9, alpha: 1))
     }
+    
+    private func addNewFeatureOrWelcomeView() {
+        if Bundle.isNewVersion { ///< 如果是新版本, 则显示引导页
+            
+        }else { ///< 如果不是, 则显示欢迎页
+            
+        }
+    }
 }
 
 extension YFTabBarController {
